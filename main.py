@@ -1,6 +1,11 @@
 
-username= input("Please enter a username:")
-print(f"Hello,{username}!")
+def play_jokes(name):
+    print(f"Okay {name}, let's start!")
+    
+
+username = input("Please enter a username: ")
+
+play_jokes(username)
 
 def play_jokes():
     
@@ -51,5 +56,8 @@ def play_jokes():
 
 
 play_jokes()
+
+
+
 
 
