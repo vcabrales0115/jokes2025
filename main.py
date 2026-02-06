@@ -1,11 +1,11 @@
 
-def play_jokes(name):
+def play_jokes1(name):
     print(f"Hello {name}!")
     
 
 username = input("Please enter a username: ")
 
-play_jokes(username)
+play_jokes1(username)
 
 def play_jokes():
     
@@ -34,29 +34,36 @@ def play_jokes():
             input("Knock Knock")
             input("Broken pencil")
             print("Nevermind, it's pointless!")
+        elif joke == "finished":
+            rate = 5
+            rating(rate)
+
         else:
             print("That topic isn't in the list!")
 
         joke = input("Do you want to hear another joke or are you finished? : ").lower()
-
-    # Feedback section
-    if joke == "finished":
-        try:
-            rate = int(input("Please rate our game 1-10: "))
-            final_score = rate * 10
-            print(f"{final_score}% satisfaction rate!")
-        except ValueError:
-            print("Thanks for playing!")
-
-        friend = input("Would you recommend this game to a friend? : ").lower()
-        if friend == "yes" or friend == "maybe":
-            print("Thanks, we appreciate it!")
-        else:
-            print("Sorry you didn't enjoy it.")
+        
+    return joke
 
 
-play_jokes()
+def rating(rate):
+    
+    try:
+        rate = int(input("Please rate our game 1-10: "))
+        final_score = rate * 10
+        print(f"{final_score}% satisfaction rate!")
+    except ValueError:
+        print("Thanks for playing!")
 
+    friend = input("Would you recommend this game to a friend? : ").lower()
+    if friend == "yes" or friend == "maybe":
+        print("Thanks, we appreciate it!")
+    else:
+        print("Sorry you didn't enjoy it.")
+
+if __name__ == "__main__":
+    joke = play_jokes()
+    print(rating(5 ))
 
 
 
