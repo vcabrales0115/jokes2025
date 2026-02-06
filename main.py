@@ -4,7 +4,7 @@ print(f"Hello,{username}!")
 
 def play_jokes():
     
-    joke = input("Do you want to hear a joke? (yes/no): ").lower()
+    joke = input("Do you want to hear a joke? : ").lower()
     
     if joke == "no":
         print("Okay, suit yourself!")
@@ -32,7 +32,7 @@ def play_jokes():
         else:
             print("That topic isn't in the list!")
 
-        joke = input("Do you want to hear another joke or are you finished? (yes/finished): ").lower()
+        joke = input("Do you want to hear another joke or are you finished? : ").lower()
 
     # Feedback section
     if joke == "finished":
@@ -43,7 +43,7 @@ def play_jokes():
         except ValueError:
             print("Thanks for playing!")
 
-        friend = input("Would you recommend this game to a friend? (yes/no): ").lower()
+        friend = input("Would you recommend this game to a friend? : ").lower()
         if friend == "yes" or friend == "maybe":
             print("Thanks, we appreciate it!")
         else:
