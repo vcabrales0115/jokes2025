@@ -1,6 +1,6 @@
 
 def play_jokes(name):
-    print(f"Okay {name}, let's start!")
+    print(f"Hello {name}!")
     
 
 username = input("Please enter a username: ")
